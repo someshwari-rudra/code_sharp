@@ -178,7 +178,7 @@ const Slider = () => {
         SliderData.map((CurrEle)=>{
           return(
             <>
-            <SwiperSlide  key={CurrEle.id}>
+            <SwiperSlide key={CurrEle.id}>
             <SwiperContainer>
               <SwiperContent>
                   <SwiperHeader>{CurrEle.title} </SwiperHeader>

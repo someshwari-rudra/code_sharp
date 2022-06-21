@@ -8,7 +8,7 @@ const NavBar = () => {
     <>
     <Nav>
       <Logo>
-          <LogoImg src='Images/logo1.png'/>
+          <LogoImg src='/Images/logo1.png'/>
       </Logo>
       <Hamburger onClick={() => setIsOpen(!isOpen)}>
         <span />
@@ -18,7 +18,7 @@ const NavBar = () => {
       <Menu isOpen={isOpen}>
         <Link to="/" style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Home</MenuLink></Link>
         <Link to="/About_us" style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>About Us</MenuLink></Link>
-        <Link to="/Courses" style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Courses</MenuLink></Link>
+        <Link to="/Courses/:CourseTitle" style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Courses</MenuLink></Link>
         <Link to="/Contact_us" style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Contact us</MenuLink></Link>
         <Link to="/Gallery" style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Gallery</MenuLink></Link>
       </Menu>
@@ -121,6 +121,7 @@ const EnquiryBtn = styled.button`
   padding: 8px 20px;
   border: none;
   background: #fbc531;
+  margin-bottom: 10px;
   border-radius: 5px;
   color: white;
   transition: all 0.3s ease;

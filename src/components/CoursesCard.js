@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import CoursesData from "./Data/CoursesData"
 import Aos from 'aos'
 import "aos/dist/aos.css"
@@ -111,8 +112,11 @@ const CoursesCard = () => {
                         <Card key={CurrELe.id} data-aos="fade-up" >
                         <CardImage src={CurrELe.image}/>
                     <CardContent>
+                    <Link to={`/Courses/${CurrELe.title}`} style={{ textDecoration:"none", color:"black", fontSize: "18px"}}> 
                         <CardTitle >{CurrELe.title}</CardTitle>
-                        <CardBtn>Know More..!</CardBtn>
+                      </Link>
+                      <Link to={`/Courses/${CurrELe.title}`} style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><CardBtn>Know More..!</CardBtn>
+                      </Link>
                     </CardContent>
                     </Card>
                     )   
