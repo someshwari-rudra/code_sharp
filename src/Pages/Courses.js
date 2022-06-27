@@ -5,11 +5,18 @@ import styled from 'styled-components';
 import { IconContext } from 'react-icons';
 import { RiArrowDropDownLine,RiArrowDropUpLine } from "react-icons/ri";
 import Footer from "../Pages/Footer"
+import NavBar from '../components/NavBar';
+import Modal from '../components/Modal';
 
 
 const Courses = () => {
   let params = useParams();
 
+  const [ShowModal, setShowModal]= useState(false);
+
+  const OpenModal=()=>{
+    setShowModal(prev => !prev)
+  }
   let SelecteCourse = CoursesData.filter((CurrELe)=>{
       return CurrELe.title === params.CourseTitle
   });
@@ -30,6 +37,7 @@ const Courses = () => {
         SelecteCourse.map((CurrELe)=>{
             return(
                 <>
+                <NavBar/>
                  <Container>
         <ImageContainer>
             <ImageCircle>
@@ -38,8 +46,9 @@ const Courses = () => {
         </ImageContainer>
         <CourseContainer>
             <CourseTitle>{CurrELe.selected.title}</CourseTitle>
-            <ReqBtn>Request a Call Back</ReqBtn>
+            <ReqBtn onClick={OpenModal}> Request a Call Back </ReqBtn>
         </CourseContainer>
+        <Modal ShowModal={ShowModal} setShowModal={setShowModal}/>
     </Container>
         <SelectedCourse>
             <Description1>
@@ -154,7 +163,6 @@ const Courses = () => {
                 </>
             )
         })
-        
     }
     <Footer/>
     </>
@@ -163,7 +171,6 @@ const Courses = () => {
 
 
 const Container = styled.div`
-    margin-top: 10vh;
     height: 60vh;
     background:url("/Images/breadcrumbs.jpg");
     background-size: cover;

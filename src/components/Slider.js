@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SliderData from "./Data/SliderData"
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -12,6 +12,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
+import Modal from './Modal';
 
 
 
@@ -140,6 +141,11 @@ const SwpiperImage= styled.img`
 const Slider = () => {
   const navigationPrevRef = React.useRef(null)
   const navigationNextRef = React.useRef(null)
+
+  const [ShowModal,setShowModal]= useState(false);
+  const OpenModal=()=>{
+    setShowModal(prev=>!prev)
+  }
   return (
     <>
      <Container>
@@ -183,7 +189,7 @@ const Slider = () => {
               <SwiperContent>
                   <SwiperHeader>{CurrEle.title} </SwiperHeader>
                   <SwiperParagraph>{CurrEle.description}</SwiperParagraph>
-                  <SwiperButton>Enquiry Now</SwiperButton>
+                  <SwiperButton onClick={OpenModal}>Enquiry Now</SwiperButton>
               </SwiperContent>
               <ImageContainer>
                 <SwpiperImage src={CurrEle.image} alt="Swiper Img1"/>
@@ -197,6 +203,7 @@ const Slider = () => {
         })
       }
     </Swiper>
+    <Modal ShowModal={ShowModal} setShowModal={setShowModal}/>
     </Container>
     </>
   )

@@ -12,7 +12,6 @@ const Container = styled.div`
     padding: 2rem 8rem;
     @media (max-width: 1080px) {
         padding: 2rem 7rem;
-    
   }
   @media (max-width: 870px) {
     padding: 1rem 3rem;
@@ -43,6 +42,11 @@ const Title = styled.h1`
         content: "";
         border-bottom: 3px solid #db9819;
     }
+ 
+    @media (max-width: 1080px) {
+      margin-top: 0rem;
+    
+  }
 `
 const CardContainer = styled.div`
     display: grid;
@@ -103,7 +107,7 @@ const CoursesCard = () => {
     },[])
   return (
     <>
-    <Container>
+    <Container id='Courses'>
         <Title>OFFERED COURSES</Title>
         <CardContainer>
             {

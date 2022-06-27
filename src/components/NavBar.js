@@ -1,9 +1,17 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import {HashLink as Link } from 'react-router-hash-link'
+import Modal from './Modal';
+
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [ShowModal, setShowModal]= useState(false);
+
+  const OpenModal=()=>{
+    setShowModal(prev => !prev)
+  }
+  
   return (
     <>
     <Nav>
@@ -17,15 +25,17 @@ const NavBar = () => {
       </Hamburger>
       <Menu isOpen={isOpen}>
         <Link to="/" style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Home</MenuLink></Link>
-        <Link to="/About_us" style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>About Us</MenuLink></Link>
-        <Link to="/Courses/:CourseTitle" style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Courses</MenuLink></Link>
-        <Link to="/Contact_us" style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Contact us</MenuLink></Link>
-        <Link to="/Gallery" style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Gallery</MenuLink></Link>
+        <Link to="#AboutUs" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>About Us</MenuLink></Link>
+        <Link to="#Courses" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Courses</MenuLink></Link>
+        <Link to="#Contactus" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Contact us</MenuLink></Link>
+        <Link to="#Gallery" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Gallery</MenuLink></Link>
       </Menu>
       <Right>
-        <EnquiryBtn>Enquiry Now</EnquiryBtn>
+        <EnquiryBtn onClick={OpenModal}>Enquiry Now</EnquiryBtn>
       </Right>
     </Nav>
+
+    <Modal ShowModal={ShowModal} setShowModal={setShowModal}/>
     </>
   )
 }
@@ -33,7 +43,7 @@ const NavBar = () => {
 // =============================================================styling of component starts=======================================================
 
 const Nav = styled.div`
-  display: flex;
+   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -45,7 +55,7 @@ const Nav = styled.div`
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(209,238,255,0.5);
+  background:#c7ecee;
   @media (max-width: 768px) {
     padding:0  1rem ;
   }
@@ -86,13 +96,14 @@ const Menu = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
+  color: white;
   @media (max-width: 768px) {
     overflow: hidden;
     flex-direction: column;
     max-height: ${({ isOpen }) => (isOpen ? "300px" : "0")};
     transition: max-height 0.3s ease-in;
     width: 100%;
-    background: rgba(209,238,255,1);
+    background:linear-gradient(rgba(102, 16, 242, 1),rgba(111, 66, 193, 1));
   }
 `;
 
@@ -103,7 +114,7 @@ const Hamburger = styled.div`
   span {
     height: 2px;
     width: 25px;
-    background: #7b7fda;
+    background: white;
     margin-bottom: 4px;
     border-radius: 5px;
   }

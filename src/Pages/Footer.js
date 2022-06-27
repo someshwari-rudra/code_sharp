@@ -96,7 +96,7 @@ const Footer = () => {
   return (
       <Container>
           <Left>
-              <Logo src="Images/logo1.png"/>
+              <Logo src="/Images/logo1.png"/>
               <Desc> We provide training for IT & Computer's Courses by Professional IT experts who are deeply engaged with the IT industry.</Desc>
               <SocialContainer>
                   <SocialIcon color="3B5999"><BsFacebook/></SocialIcon>
