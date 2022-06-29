@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import CoursesData from "./Data/CoursesData"
 import Aos from 'aos'
 import "aos/dist/aos.css"
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 const Container = styled.div`
     width: 100%;
@@ -87,12 +88,15 @@ const CardTitle = styled.h2`
     }
 `
 const CardBtn = styled.button`
-    padding: 9px 0px;
+    padding: 9px 30px;
     width: 100%;
     margin-top: 15px;
     background:  #fbc531;
     color: white;
     border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     cursor: pointer;
     border-radius: 5px;
     &:hover{
@@ -108,7 +112,7 @@ const CoursesCard = () => {
   return (
     <>
     <Container id='Courses'>
-        <Title>OFFERED COURSES</Title>
+        <Title>Courses Offered </Title>
         <CardContainer>
             {
                 CoursesData.map((CurrELe)=>{
@@ -119,7 +123,7 @@ const CoursesCard = () => {
                     <Link to={`/Courses/${CurrELe.title}`} style={{ textDecoration:"none", color:"black", fontSize: "18px"}}> 
                         <CardTitle >{CurrELe.title}</CardTitle>
                       </Link>
-                      <Link to={`/Courses/${CurrELe.title}`} style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><CardBtn>Know More..!</CardBtn>
+                      <Link to={`/Courses/${CurrELe.title}`} style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><CardBtn>Know More.. <AiOutlineArrowRight size="1.5rem"/></CardBtn>
                       </Link>
                     </CardContent>
                     </Card>

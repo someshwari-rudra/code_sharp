@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import styled from 'styled-components'
+import styled ,{keyframes}from 'styled-components'
 import {HashLink as Link } from 'react-router-hash-link'
 import Modal from './Modal';
 
@@ -27,11 +27,11 @@ const NavBar = () => {
         <Link to="/" style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Home</MenuLink></Link>
         <Link to="#AboutUs" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>About Us</MenuLink></Link>
         <Link to="#Courses" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Courses</MenuLink></Link>
-        <Link to="#Contactus" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Contact us</MenuLink></Link>
         <Link to="#Gallery" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Gallery</MenuLink></Link>
+        <Link to="#Contactus" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Contact Us</MenuLink></Link>
       </Menu>
       <Right>
-        <EnquiryBtn onClick={OpenModal}>Enquiry Now</EnquiryBtn>
+        <EnquiryBtn onClick={OpenModal}>Enquire Now</EnquiryBtn>
       </Right>
     </Nav>
 
@@ -128,6 +128,11 @@ const Right = styled.div`
   justify-content: center;
   align-items: center;
 `
+
+const ButtonAnim =  keyframes` 
+  0%{transform: scale(1);}
+  100% {transform: scale(1.2);}
+`
 const EnquiryBtn = styled.button`
   padding: 8px 20px;
   border: none;
@@ -136,6 +141,7 @@ const EnquiryBtn = styled.button`
   border-radius: 5px;
   color: white;
   transition: all 0.3s ease;
+  animation: ${ButtonAnim} 1.5s alternate infinite ease-in;;
   cursor: pointer;
   &:hover{
     color: white;

@@ -5,6 +5,7 @@ const CoursesData =[
         title:"web Development",
         selected:{
             title:"web development in surat with 100% placements",
+            img:"/Images/courses/webdev1.png",
             overview:{
                 heading1:"Why Choose Web Development?",
                 description1:"The web developer follows the designer’s idea, concepts and creates the code that is used to turn them into a unique website and bring them to open for all.Web developers involved in designing a website, write web scripts using PHP Language too. Additionally, PHP developers may help maintain and update a database used for a dynamic website.The website nowadays is essential for advertising and promoting products and brands. A good web site determines all about the industry and its product in a clear way.",
@@ -85,6 +86,7 @@ const CoursesData =[
         title:"Graphic Design",
         selected:{
             title:"Learn Graphic & Animation Course with Job Placement",
+            img:"/Images/courses/graphics desing.png",
             overview:{
                 heading1:"What Is Graphic Design?",
                 description1:"Graphic design is all about planning and projecting experiences and ideas.A graphic designer creates their ideas with textual and visual content.Graphic design illustrated creating images that demand direct attention from the viewers.This is the reason that graphic design is also known as communication design.To communicate, a graphic designer can use virtual or physical communication tools such as images, graphic forms, and words.A good career in Graphic Designing is not a simple thing. It needs a unique idea and skill. To acquire these skills learn graphics design course atCreative Design & Multimedia Institute best Graphics Design Training Institute in Surat. Graphic design is more about communicating with an audience.",
@@ -165,6 +167,7 @@ const CoursesData =[
         title:"Digital Marketing",
         selected:{
             title:"Digital Marketing Course In Surat -Learn The Definitive Guide To Digital Marketing",
+            img:"/Images/courses/digital marketing.png",
             overview:{
                 heading1:"Why Choose Web Development?",
                 description1:"The word Digital Marketing was first introduced at the earliest of the 90s. In this competitive world, each and every business needs a unique marketing strategy Internet marketing, web marketing, or online marketing all are the same names as called digital marketing. Code Sharp is the No1 Institute in Surat offers a 100% Job Oriented Digital Marketing Course in Surat with certification. Digital Marketing is the most demanded and trendiest skill in the year 2020 which opens the door with plenty of opportunities. Digital Marketing is beyond the term “course”.                 ",
@@ -241,6 +244,7 @@ const CoursesData =[
         title:"Mobile App Development",
         selected:{
             title:"web development in surat with 100% placements",
+            img:"/Images/courses/Appdev.png",
             overview:{
                 heading1:"Why Choose Web Development?",
                 description1:"The web developer follows the designer’s idea, concepts and creates the code that is used to turn them into a unique website and bring them to open for all.Web developers involved in designing a website, write web scripts using PHP Language too. Additionally, PHP developers may help maintain and update a database used for a dynamic website.The website nowadays is essential for advertising and promoting products and brands. A good web site determines all about the industry and its product in a clear way.",
@@ -322,6 +326,7 @@ const CoursesData =[
         title:"C C++ Programming",
         selected:{
             title:"C, C++ Programming Course in Surat",
+            img:"/Images/courses/cc++1.png",
             overview:{
                 heading1:"Introduction Of C Programming Training",
                 description1:"C Language is the most general programming language ever. C-language is an amazing universally useful programming language that is quick, compact and effectively accessible in all stages. At the point when an individual needs to begin a programming venture, C-language stands need to begin with it. C-language useable in the wide scope of utilizations from windows, IOS to programming which makes dynamic 3D motion pictures it must use to C-language. A large number of the language used to C-language ideas in their help record. For Learn C programming Creative Design and Multimedia is the best C Language Training institute in Surat.",
@@ -394,6 +399,7 @@ const CoursesData =[
         title:"web Design",
         selected:{
             title:"web development in surat with 100% placements",
+            img:"/Images/courses/webdesign.png",
             overview:{
                 heading1:"Why Choose Web Development?",
                 description1:"The web developer follows the designer’s idea, concepts and creates the code that is used to turn them into a unique website and bring them to open for all.Web developers involved in designing a website, write web scripts using PHP Language too. Additionally, PHP developers may help maintain and update a database used for a dynamic website.The website nowadays is essential for advertising and promoting products and brands. A good web site determines all about the industry and its product in a clear way.",
@@ -467,6 +473,7 @@ const CoursesData =[
         title:"Tally + Accounting",
         selected:{
             title:"Best Tally Accounting Training-Learn Advance Accounting Concept",
+            img:"/Images/courses/tally.png",
             overview:{
                 heading1:"What is accounting? ",
                 description1:"Accounting is the chronicle of monetary exchanges of a business or association.It additionally incorporates the way toward outlining, investigating and announcing these exchanges in fiscal reports. Tally ERP is the most demanding and most used accounting software.CodeSharp offer you the best tally accounting training in Surat.It is easy to use software and is designed by simple complex on the day to day activities associated with any business.",
@@ -538,6 +545,7 @@ const CoursesData =[
         title:"Live Projects",
         selected:{
             title:"web development in surat with 100% placements",
+            img:"/Images/courses/liveProjects2.png",
             overview:{
                 heading1:"Why Choose Web Development?",
                 description1:"The web developer follows the designer’s idea, concepts and creates the code that is used to turn them into a unique website and bring them to open for all.Web developers involved in designing a website, write web scripts using PHP Language too. Additionally, PHP developers may help maintain and update a database used for a dynamic website.The website nowadays is essential for advertising and promoting products and brands. A good web site determines all about the industry and its product in a clear way.",
@@ -619,6 +627,7 @@ const CoursesData =[
         title:"Game Development(UNITY)",
         selected:{
             title:"Unity 3D-The Best Tool For Game Development",
+            img:"/Images/courses/gamedev1.png",
             overview:{
                 heading1:"Why Choose Unity Game Development?",
                 description1:"Nowadays millennial love Games, which is the most widely popular subject for refreshes, mostly like youngster kids even person love to connect with games.There is a huge scope in the gaming filed, to making a career with First Unity Game Development Training Course Institute.Unity is developed by Unity technology it is a cross-platform game development used to develop video games for PC, Laptop, mobile, and web sites. It is first developed by Apple.Unity is a cross-platform game development application that helps with creating games, manipulate games, filtration 3d games, 2d games manipulation. Unity game is written in C# language and Unity Scripts used for making components",

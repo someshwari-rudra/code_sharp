@@ -189,7 +189,7 @@ const Slider = () => {
               <SwiperContent>
                   <SwiperHeader>{CurrEle.title} </SwiperHeader>
                   <SwiperParagraph>{CurrEle.description}</SwiperParagraph>
-                  <SwiperButton onClick={OpenModal}>Enquiry Now</SwiperButton>
+                  <SwiperButton onClick={OpenModal}>Enquire Now</SwiperButton>
               </SwiperContent>
               <ImageContainer>
                 <SwpiperImage src={CurrEle.image} alt="Swiper Img1"/>
