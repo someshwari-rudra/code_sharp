@@ -12,10 +12,10 @@ const mapStyles = {
   height: "70vh",
   width: "100%",
  
-  '@media (max-width: 768px)': {
+  '@media (maxWidth: 768px)': {
     margin: ' 0rem 4rem',
   },
-  '@media (max-width: 360px)': {
+  '@media (maxWidth: 360px)': {
     display: 'none',
   },
 };

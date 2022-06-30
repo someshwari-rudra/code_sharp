@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import styled ,{keyframes}from 'styled-components'
-import {HashLink as Link } from 'react-router-hash-link'
+import {Link} from 'react-router-dom'
+import {HashLink  } from 'react-router-hash-link'
 import Modal from './Modal';
 
 
@@ -25,10 +26,10 @@ const NavBar = () => {
       </Hamburger>
       <Menu isOpen={isOpen}>
         <Link to="/" style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Home</MenuLink></Link>
-        <Link to="#AboutUs" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>About Us</MenuLink></Link>
-        <Link to="#Courses" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Courses</MenuLink></Link>
-        <Link to="#Gallery" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Gallery</MenuLink></Link>
-        <Link to="#Contactus" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Contact Us</MenuLink></Link>
+        <HashLink to="#AboutUs" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>About Us</MenuLink></HashLink>
+        <HashLink to="#Courses" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Courses</MenuLink></HashLink>
+        <Link to="#Gallery"  style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Gallery</MenuLink></Link>
+        <HashLink to="#Contactus" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Contact Us</MenuLink></HashLink>
       </Menu>
       <Right>
         <EnquiryBtn onClick={OpenModal}>Enquire Now</EnquiryBtn>

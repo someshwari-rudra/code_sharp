@@ -30,7 +30,6 @@ const TitleBloder = styled.h2`
     font-size: 40px;
     font-weight: 500;
     color:  hsl(217, 54%, 11%);
-    margin-bottom: 2rem;
     @media (max-width: 1080px) {
       font-size: 24px;
       margin-bottom: 1rem;
@@ -87,15 +86,10 @@ const Content = styled.div`
 `
 const ImageCotainer = styled.div`
   flex: 1;
-  position: relative;
   img{
     width: 100%;
     height: 100%;
-    margin-left: 30px;
-    border-radius: 50%;
-    padding: 20px;
     @media (max-width: 1080px) {
-      border-radius: 50%;
       margin-left: 0%;
   }
   @media (max-width: 870px) {
@@ -104,64 +98,7 @@ const ImageCotainer = styled.div`
   }
   }
 `
-const Circle = styled.div`
-    height: 300px;
-    width: 300px;
-    position: absolute;
-    top: -10%;
-    left: 50%;
-    background: linear-gradient(rgba(102, 16, 242, 0.2),rgba(111, 66, 193, 0.3));
-    border-radius: 50%;
-    z-index: -1;
-    @media (max-width: 1080px) {
-      display: none;
-  }
-  @media (max-width: 870px) {
-      font-size: 14px;
-      order: 1;
-    
-  }
-`
-const Circle2= styled.div`
-     height: 40px;
-    width: 40px;
-    position: absolute;
-    top: -10%;
-    left: 0%;
-    background: linear-gradient(rgba(102, 16, 242, 0.2),rgba(111, 66, 193, 0.3));
-    border-radius: 50%;
-    z-index: -1;
-    @media (max-width: 1080px) {
-      display: none;
-  }
-`
-const Circle3 = styled.div`
-     height: 250px;
-    width: 250px;
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    background: linear-gradient(rgba(102, 16, 242, 0.2),rgba(111, 66, 193, 0.3));
-    border-radius: 50%;
-    z-index: -1;
-    @media (max-width: 1080px) {
-      display: none;
-  }
-`
 
-const Circle4 = styled.div`
-     height: 40px;
-    width: 40px;
-    position: absolute;
-    top: 90%;
-    left: 100%;
-    background: linear-gradient(rgba(102, 16, 242, 0.2),rgba(111, 66, 193, 0.3));
-    border-radius: 50%;
-    z-index: -1;
-    @media (max-width: 1080px) {
-      display: none;
-  }
-`
 
 const About = () => {
   useEffect(()=>{
@@ -179,10 +116,6 @@ const About = () => {
           </Content>
           <ImageCotainer data-aos="fade-left">
               <img src="/Images/aboutus.png" alt="about us" />
-              <Circle></Circle>
-              <Circle2></Circle2>
-              <Circle3></Circle3>
-              <Circle4></Circle4>
           </ImageCotainer>
         </AboutUsContainer>
     </Container>

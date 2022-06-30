@@ -54,6 +54,10 @@ const CardContainer = styled.div`
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     grid-gap: 35px;
     align-items: stretch;
+    @media (max-width: 700px) {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+  }
 
 `
 const Card = styled.div`
@@ -67,7 +71,7 @@ const Card = styled.div`
   }
 `
 const CardImage = styled.img`
-  max-width: 100%;
+  width: 100%;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 

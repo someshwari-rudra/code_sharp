@@ -15,6 +15,66 @@ import 'swiper/css/autoplay';
 import Modal from './Modal';
 
 
+const Slider = () => {
+  const navigationPrevRef = React.useRef(null)
+  const navigationNextRef = React.useRef(null)
+
+  const [ShowModal,setShowModal]= useState(false);
+  const OpenModal=()=>{
+    setShowModal(prev=>!prev)
+  }
+  return (
+    <>
+     <Container>
+    <Swiper
+      // install Swiper modules
+      modules={[Navigation, Pagination, Scrollbar,Autoplay]}
+      slidesPerView={1}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      pagination={{ clickable: true }}
+      navigation={{
+        prevEl: navigationPrevRef.current,
+        nextEl: navigationNextRef.current,
+      }}
+      onBeforeInit={(swiper) => {
+        swiper.params.navigation.prevEl = navigationPrevRef.current;
+        swiper.params.navigation.nextEl = navigationNextRef.current;
+   }}
+      onSlideChange={() => console.log('slide change')}
+
+    >
+        {
+        SliderData.map((CurrEle)=>{
+          return(
+            <>
+            <SwiperSlide key={CurrEle.id}>
+            <SwiperContainer>
+              <SwiperContent>
+                  <SwiperHeader>{CurrEle.title} </SwiperHeader>
+                  <SwiperParagraph>{CurrEle.description}</SwiperParagraph>
+                  <SwiperButton onClick={OpenModal}>Enquire Now</SwiperButton>
+              </SwiperContent>
+              <ImageContainer>
+                <SwpiperImage src={CurrEle.image} alt="Swiper Img1"/>
+              </ImageContainer>
+            </SwiperContainer>
+          </SwiperSlide>
+            <div ref={navigationPrevRef} />
+            <div ref={navigationNextRef} />
+          </>
+          )
+        })
+      }
+    </Swiper>
+    <Modal ShowModal={ShowModal} setShowModal={setShowModal}/>
+    </Container>
+    </>
+  )
+}
+
 
 const Container = styled.div`
     height: 100vh;
@@ -135,78 +195,5 @@ const SwpiperImage= styled.img`
   }
  
 `
-
-
-
-const Slider = () => {
-  const navigationPrevRef = React.useRef(null)
-  const navigationNextRef = React.useRef(null)
-
-  const [ShowModal,setShowModal]= useState(false);
-  const OpenModal=()=>{
-    setShowModal(prev=>!prev)
-  }
-  return (
-    <>
-     <Container>
-    <Swiper
-      // install Swiper modules
-      modules={[Navigation, Pagination, Scrollbar,Autoplay]}
-      slidesPerView={1}
-      autoplay={{
-        delay: 2500,
-        disableOnInteraction: false,
-      }}
-      navigation={{
-        // Both prevEl & nextEl are null at render so this does not work
-        prevEl: navigationPrevRef.current,
-        nextEl: navigationNextRef.current,
-      }}
-      
-      pagination={{ clickable: true }}
-      onSwiper={(swiper) => {
-        // Delay execution for the refs to be defined
-        setTimeout(() => {
-          // Override prevEl & nextEl now that refs are defined
-          swiper.params.navigation.prevEl = navigationPrevRef.current
-          swiper.params.navigation.nextEl = navigationNextRef.current
-
-          // Re-init navigation
-          swiper.navigation.destroy()
-          swiper.navigation.init()
-          swiper.navigation.update()
-        })
-      }}
-      onSlideChange={() => console.log('slide change')}
-
-    >
-        {
-        SliderData.map((CurrEle)=>{
-          return(
-            <>
-            <SwiperSlide key={CurrEle.id}>
-            <SwiperContainer>
-              <SwiperContent>
-                  <SwiperHeader>{CurrEle.title} </SwiperHeader>
-                  <SwiperParagraph>{CurrEle.description}</SwiperParagraph>
-                  <SwiperButton onClick={OpenModal}>Enquire Now</SwiperButton>
-              </SwiperContent>
-              <ImageContainer>
-                <SwpiperImage src={CurrEle.image} alt="Swiper Img1"/>
-              </ImageContainer>
-            </SwiperContainer>
-          </SwiperSlide>
-          <div ref={navigationPrevRef} />
-          <div ref={navigationNextRef} />
-          </>
-          )
-        })
-      }
-    </Swiper>
-    <Modal ShowModal={ShowModal} setShowModal={setShowModal}/>
-    </Container>
-    </>
-  )
-}
 
 export default Slider
