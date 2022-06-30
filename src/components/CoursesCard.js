@@ -51,7 +51,7 @@ const Title = styled.h1`
 `
 const CardContainer = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     grid-gap: 35px;
     align-items: stretch;
 

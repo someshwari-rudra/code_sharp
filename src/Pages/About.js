@@ -178,7 +178,7 @@ const About = () => {
             <p>Code Sharp IT Academy is a reputed training institute in Surat for web design, Game design,Mobile App Development, Game Development ,Video Editing & All types of IT Courses with 8 years of full-fledged, result-oriented training experience. We stepped in the market in 2014 with the goal to help students, working professionals and other interested candidates get that dream job or open that desired freelance business in some of the most popular Computer / IT fields. Our aim is to ease the hiring process for businesses and organizations by providing work-ready professionals who can contribute greatly to their success. Since then, we have worked hard to achieve this goal and dedicated our time and resources to train students extensively.</p>
           </Content>
           <ImageCotainer data-aos="fade-left">
-              <img src="/Images/AboutUs.jpg" alt="about us" />
+              <img src="/Images/aboutus.png" alt="about us" />
               <Circle></Circle>
               <Circle2></Circle2>
               <Circle3></Circle3>

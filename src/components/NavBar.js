@@ -103,7 +103,7 @@ const Menu = styled.div`
     max-height: ${({ isOpen }) => (isOpen ? "300px" : "0")};
     transition: max-height 0.3s ease-in;
     width: 100%;
-    background:linear-gradient(rgba(102, 16, 242, 1),rgba(111, 66, 193, 1));
+    background:#c7ecee;
   }
 `;
 
@@ -114,7 +114,7 @@ const Hamburger = styled.div`
   span {
     height: 2px;
     width: 25px;
-    background: white;
+    background: black;
     margin-bottom: 4px;
     border-radius: 5px;
   }

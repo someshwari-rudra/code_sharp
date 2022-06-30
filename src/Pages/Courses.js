@@ -283,7 +283,7 @@ const SelectedCourse =styled.div`
       grid-template-columns: 1fr;
   }
   @media (max-width: 512px) {
-      padding: 2.5rem;
+      padding: 1.5rem;
   }
   @media (max-width: 360px) {
     padding: 1rem;
@@ -299,7 +299,7 @@ const Description1 =styled.div`
       padding: 1rem;
   }
   @media (max-width: 360px) {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 `
 const Title =styled.h1`
@@ -333,12 +333,23 @@ font-weight: 500;
 const DataContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2,1fr);
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    
+}
 `
 const Accordian = styled.div`
 
 `
 const InquiryFormContainer = styled.div`
   padding: 3rem;
+  @media (max-width: 512px) {
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+  }
+  @media (max-width: 360px) {
+    padding: 1rem;
+  }
 `
 const Form = styled.div`
 padding: 3rem;
@@ -346,9 +357,12 @@ border-radius: 20px;
 background: #eee;
  
 `
-const FormTitle= styled.h1`
+const FormTitle= styled.div`
   text-align: center;
   font-weight: 400;
+  font-size: 30px;
+  margin-bottom: 20px;
+  ;
 `
 const AccordionSection = styled.div`
   background: #fff;
@@ -357,6 +371,12 @@ const AccordionSection = styled.div`
 const Container1 = styled.div`
 padding: 3rem;
   width: 100%;
+  @media (max-width: 512px) {
+      padding: 1.5rem;
+  }
+  @media (max-width: 360px) {
+    padding: 1rem;
+  }
 `;
 
 const Wrap = styled.div`
