@@ -49,7 +49,9 @@ const ModalWrapper = styled.div`
    width: 400px;
 }
 @media (max-width: 568px) {
-  width: 300px;
+  width: 320px;
+  padding: 2rem 1rem;
+
   
 }
 @media (max-width: 360px) {

@@ -8,6 +8,13 @@ const Container = styled.div`
     display: flex;
     padding: 8rem 10rem;
     flex-wrap: wrap;  
+    @media (max-width: 1080px) {
+      padding: 4rem 5rem;
+  }
+  @media (max-width: 870px) {
+    padding: 2rem 4rem;
+    
+  }
 `
 
 

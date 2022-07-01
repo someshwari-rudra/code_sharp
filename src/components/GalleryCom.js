@@ -9,11 +9,11 @@ const Container = styled.div`
     margin: 5px;
     position: relative;
     background: black;
-    min-width: 340px;
-    height: 60vh;
 `
 const ImageLoading = styled(LazyLoadImage)`
   object-fit: cover;
+  width: 100px;
+  height: 100px;
 `
 
 
@@ -26,9 +26,7 @@ const GalleryCom = ({item}) => {
        alt="images"
        effect="blur"
        src={item.image} 
-       height="100%"
-       width="100%"
-        className='GalleryImage'
+    
       />
 </Container>
   )

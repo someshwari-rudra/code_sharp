@@ -35,7 +35,7 @@ const Title = styled.h1`
  
 `
 const ImagesContainer = styled.div`
-    width: 70%;
+    width: 60%;
     margin-top: 3rem;
     margin-bottom: 6rem;
     display: grid;
@@ -74,7 +74,7 @@ const RecruitmentPartner = () => {
                       <Img src='Images/placement Partner/28infotech.png' alt='placement partners'  />
                   </Image>
                    <Image >
-                      <Img src='Images/placement Partner/windex.png' alt='placement partners'  />
+                      <Img src='Images/placement Partner/Windex.png' alt='placement partners'  />
                   </Image>
                    <Image >
                       <Img src='Images/placement Partner/placement3.png' alt='placement partners'  />
