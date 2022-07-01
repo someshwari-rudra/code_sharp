@@ -19,7 +19,7 @@ function App() {
           <Route path='#Courses' element={<CoursesCard/>}></Route>
           <Route path='#AboutUs' element={<About/>}></Route>
           <Route path='#Contactus' element={<ContactUs/>}></Route>
-          <Route path='#Gallery' element={<Gallery/>}></Route>
+          <Route path='/Gallery' element={<Gallery/>}></Route>
           <Route path='/*' element={<Page404/>}></Route>
       </Routes>
  </Router>
