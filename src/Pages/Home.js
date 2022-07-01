@@ -5,6 +5,7 @@ import NavBar from '../components/NavBar'
 import About from './About'
 import Footer from './Footer'
 import ContactUs from './ContactUs'
+import RecruitmentPartner from '../components/RecruitmentPartner'
 // import Gallery from './Gallery'
 const Home = () => {
   
@@ -15,7 +16,8 @@ const Home = () => {
     <About/>
     <CoursesCard />
     {/* <Gallery/> */}
-    <ContactUs/>
+    <ContactUs />
+    <RecruitmentPartner/>
     <Footer/>
     </>
   )

@@ -12,7 +12,9 @@ const Container = styled.div`
     min-width: 340px;
     height: 60vh;
 `
-
+const ImageLoading = styled(LazyLoadImage)`
+  object-fit: cover;
+`
 
 
 const GalleryCom = ({item}) => {
@@ -20,7 +22,7 @@ const GalleryCom = ({item}) => {
   return (
     
     <Container key={item.id}>
-      <LazyLoadImage 
+      <ImageLoading 
        alt="images"
        effect="blur"
        src={item.image} 

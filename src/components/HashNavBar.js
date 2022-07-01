@@ -5,8 +5,8 @@ import {HashLink  } from 'react-router-hash-link'
 import Modal from './Modal';
 
 
-const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const HashNavBar = () => {
+      const [isOpen, setIsOpen] = useState(false);
   const [ShowModal, setShowModal]= useState(false);
 
   const OpenModal=()=>{
@@ -14,7 +14,7 @@ const NavBar = () => {
   }
   
   return (
-    <>
+<>
     <Nav>
       <Logo>
           <LogoImg src='/Images/logo1.png'/>
@@ -26,10 +26,10 @@ const NavBar = () => {
       </Hamburger>
       <Menu isOpen={isOpen}>
         <Link to="/" style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Home</MenuLink></Link>
-        <HashLink to="#AboutUs" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>About Us</MenuLink></HashLink>
-        <HashLink to="#Courses" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Courses</MenuLink></HashLink>
+        <HashLink to="/#AboutUs" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>About Us</MenuLink></HashLink>
+        <HashLink to="/#Courses" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Courses</MenuLink></HashLink>
         <Link to="/Gallery"  style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Gallery</MenuLink></Link>
-        <HashLink to="#Contactus" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Contact Us</MenuLink></HashLink>
+        <HashLink to="/#Contactus" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Contact Us</MenuLink></HashLink>
       </Menu>
       <Right>
         <EnquiryBtn onClick={OpenModal}>Enquire Now</EnquiryBtn>
@@ -37,11 +37,10 @@ const NavBar = () => {
     </Nav>
 
     <Modal ShowModal={ShowModal} setShowModal={setShowModal}/>
+          
     </>
   )
 }
-
-// =============================================================styling of component starts=======================================================
 
 const Nav = styled.div`
    display: flex;
@@ -154,4 +153,5 @@ const EnquiryBtn = styled.button`
 `
 // =============================================================styling of component Ends=======================================================
 
-export default NavBar
+
+export default HashNavBar

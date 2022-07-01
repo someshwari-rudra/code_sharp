@@ -2,34 +2,20 @@ import React from 'react'
 import styled from 'styled-components'
 import GalleryCom from "../components/GalleryCom"
 import GalleryImages from "../components/Data/GalleryImages"
+import HashNavBar from '../components/HashNavBar'
 
 const Container = styled.div`
     display: flex;
-    padding: 20px;
+    padding: 8rem 10rem;
     flex-wrap: wrap;  
 `
-const Title = styled.div`
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-weight: 500;
-  margin: 3rem 0;
-  font-size: 34px;
-  &::after{
-    content: "";
-    width: 10%;
-    border-bottom: 2px solid  #fbc531;
-  }
 
-`
 
 const Gallery = () => {
  
   return (
     <>
-      <Title id='Gallery'>Our Gallery</Title>
+      <HashNavBar/>
       <Container>
    
           {

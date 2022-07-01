@@ -42,6 +42,9 @@ const Title = styled.h1`
         align-items: center;
         content: "";
         border-bottom: 3px solid #db9819;
+        @media (max-width: 580px) {
+       width: 50%;
+      }
     }
  
     @media (max-width: 1080px) {
@@ -116,7 +119,7 @@ const CoursesCard = () => {
   return (
     <>
     <Container id='Courses'>
-        <Title>Courses Offered </Title>
+        <Title>COURSES OFFERED </Title>
         <CardContainer>
             {
                 CoursesData.map((CurrELe)=>{

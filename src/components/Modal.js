@@ -15,10 +15,21 @@ const Background = styled.div`
   overflow: hidden;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
-  position:fixed ;
+  position:fixed;
   z-index: 9999;
   justify-content: center;
   align-items: center;
+  @media (max-width: 1024px) {
+   width: 100%;
+   height: 100vh;
+}
+@media (max-width: 568px) {
+  width: 100vw;
+  
+}
+@media (max-width: 360px) {
+  
+}
 `;
 
 const ModalWrapper = styled.div`
@@ -33,6 +44,17 @@ const ModalWrapper = styled.div`
   z-index: 10;
   border-radius: 10px;
   padding: 1rem 2rem;
+
+@media (max-width: 1024px) {
+   width: 400px;
+}
+@media (max-width: 568px) {
+  width: 300px;
+  
+}
+@media (max-width: 360px) {
+  
+}
  
 `;
 const Title =styled.h1`
@@ -41,6 +63,9 @@ const Title =styled.h1`
     font-size: 30px;
     color:  hsl(217, 54%, 11%);
     margin-bottom: 20px;
+    @media (max-width: 568px) {
+    font-size: 20px;
+}
 `
 
 
@@ -151,6 +176,10 @@ const Input = styled(Field)`
       }
     `}
 `;
+  const FormContainer = styled.div`
+ 
+
+`
 
 const Modal = ({ShowModal,setShowModal}) => {
 
@@ -163,11 +192,7 @@ const Modal = ({ShowModal,setShowModal}) => {
     }
   };
 
-  const FormContainer = styled.div`
-  width: 400px;
-  background: #fff;
 
-`
 
 const InitialValues={
   name:"",

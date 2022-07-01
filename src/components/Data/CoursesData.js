@@ -472,7 +472,7 @@ const CoursesData =[
         image:"/Images/Card_Images/tally.jpg",
         title:"Tally + Accounting",
         selected:{
-            title:"Best Tally Accounting Training-Learn Advance Accounting Concept",
+            title:"Best Tally + Accounting Training-Learn Advance Accounting Concept",
             img:"/Images/courses/tally.png",
             overview:{
                 heading1:"What is accounting? ",

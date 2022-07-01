@@ -4,7 +4,7 @@ import CoursesData from "../components/Data/CoursesData"
 import styled from 'styled-components';
 import { RiArrowDropDownLine,RiArrowDropUpLine } from "react-icons/ri";
 import Footer from "../Pages/Footer"
-import NavBar from '../components/NavBar';
+import HashNavBar from '../components/HashNavBar';
 import Modal from '../components/Modal';
 import ContactusForm from "../components/ContactusForm"
 
@@ -37,7 +37,7 @@ const Courses = () => {
         SelecteCourse.map((CurrELe)=>{
             return(
                 <>
-                <NavBar/>
+                <HashNavBar/>
                  <Container>
                     <ImageContainer>
                       <ImageCircle>
@@ -355,6 +355,12 @@ const Form = styled.div`
 padding: 3rem;
 border-radius: 20px;
 background: #eee;
+@media (max-width: 512px) {
+      padding: 1.5rem;
+  }
+  @media (max-width: 360px) {
+    padding: 1rem;
+  }
  
 `
 const FormTitle= styled.div`
@@ -369,8 +375,9 @@ const AccordionSection = styled.div`
 `;
 
 const Container1 = styled.div`
-padding: 3rem;
+  padding: 3rem;
   width: 100%;
+  transition: all 0.4s ease;
   @media (max-width: 512px) {
       padding: 1.5rem;
   }
@@ -386,7 +393,6 @@ const Wrap = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  text-align: center;
   border-bottom: 1px solid #95a5a6;
   cursor: pointer;
   h1 {

@@ -24,26 +24,26 @@ const GalleryImages  = [
         image:"Images/gallery Images/img6.jpg"
     },
 
-    // {
-    //     id:7,
-    //     image:"Images/gallery Images/img7.jpg"
-    // },
-    // {
-    //     id:8,
-    //     image:"Images/gallery Images/img8.jpg"
-    // },
-    // {
-    //     id:9,
-    //     image:"Images/gallery Images/img9.jpg"
-    // },
-    // {
-    //     id:10,
-    //     image:"Images/gallery Images/img10.jpg"
-    // },
-    // {
-    //     id:11,
-    //     image:"Images/gallery Images/img11.jpg"
-    // },
+    {
+        id:7,
+        image:"Images/gallery Images/img7.jpg"
+    },
+    {
+        id:8,
+        image:"Images/gallery Images/img8.jpg"
+    },
+    {
+        id:9,
+        image:"Images/gallery Images/img9.jpg"
+    },
+    {
+        id:10,
+        image:"Images/gallery Images/img10.jpg"
+    },
+    {
+        id:11,
+        image:"Images/gallery Images/img11.jpg"
+    },
 
  
 ]

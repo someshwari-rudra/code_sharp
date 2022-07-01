@@ -60,13 +60,21 @@ const Content = styled.div`
   padding: 5rem 8rem 5rem 5rem;
   border-radius: 10px 50% 50% 10px;
   h1{
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 500;
     margin-bottom: 14px;
+    @media (max-width: 568px) {
+    font-size: 20px;
+    text-align: justify;
+}
   }
   p{
     text-align: justify;
+    font-size: 18px;
+    color: #2d3436;
+    @media (max-width: 568px) {
     font-size: 14px;
+}
   }
   @media (max-width: 1080px) {
       font-size: 18px;
@@ -106,9 +114,9 @@ const About = () => {
 },[])
   return (
    <>
-   <Title data-aos="fade-up">Welcome to the</Title>
+   <Title data-aos="fade-up" id='AboutUs'>Welcome to the</Title>
         <TitleBloder data-aos="fade-up"> #1 IT Training & Placement Company in Surat</TitleBloder>
-    <Container id='AboutUs'>
+    <Container>
         <AboutUsContainer>
           <Content data-aos="fade-right">
             <h1>IT CAREER IN SURAT, MOVING TOWARDS THE BETTER TOMORROW!</h1>

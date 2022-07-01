@@ -111,7 +111,7 @@ const SwiperContent= styled.div`
     box-sizing: border-box;
     @media (max-width: 700px) {
       order:2;
-     padding: 0rem 3rem;
+     padding: 0rem 2rem;
     grid-column: 1/2;
   }
     
@@ -163,6 +163,9 @@ const SwiperButton= styled.button`
     color: white;
     background:  hsl(217, 54%, 11%);
   }
+  @media (max-width: 568px) {
+    margin-bottom: 2rem ;
+}
 `
 const ImageContainer= styled.div`
   grid-column: 2/3;

@@ -95,7 +95,7 @@ const FormContainer= styled.div`
     
 }
 @media (max-width: 768px) {
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   margin: 2rem;
   overflow: hidden;
   

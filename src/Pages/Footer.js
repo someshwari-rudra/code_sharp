@@ -3,7 +3,9 @@ import styled from 'styled-components'
 import { FaInstagram ,FaLinkedin} from 'react-icons/fa';
 import { GoLocation } from "react-icons/go";
 import { BsFacebook } from "react-icons/bs";
-import { AiFillPhone,AiOutlineMail } from "react-icons/ai";
+import { AiFillPhone, AiOutlineMail } from "react-icons/ai";
+import { HashLink } from 'react-router-hash-link'
+import {Link} from 'react-router-dom'
 
 const Container = styled.div`
     display: grid;
@@ -99,19 +101,19 @@ const Footer = () => {
               <Logo src="/Images/logo1.png"/>
               <Desc> We provide training for IT & Computer's Courses by Professional IT experts who are deeply engaged with the IT industry.</Desc>
               <SocialContainer>
-                  <SocialIcon color="3B5999"><BsFacebook/></SocialIcon>
-                  <SocialIcon color="E4405F"><FaInstagram/></SocialIcon>
+                <a href="https://www.facebook.com/CODE-SHARP-IT-Academy-114770944452749"><SocialIcon color="3B5999"><BsFacebook/></SocialIcon></a>
+                  <a href="https://www.instagram.com/code.sharp_academy/"><SocialIcon color="E4405F"><FaInstagram/></SocialIcon></a>
                   <SocialIcon color="55ACEE"><FaLinkedin/></SocialIcon>
               </SocialContainer>
           </Left>
           <Center>
               <Title>Usefull Links</Title>
               <List>
-                <ListItem>Home</ListItem>
-                <ListItem>Courses</ListItem>
-                <ListItem>About Us</ListItem>
-                <ListItem>Contact Us</ListItem>
-                <ListItem>Gallery</ListItem>
+                 <ListItem><Link to="/" style={{ textDecoration:"none", color:" #c8d6e5", fontSize: "14px"}}>Home</Link></ListItem>
+                <ListItem><HashLink to="#Courses" smooth style={{ textDecoration:"none", color:" #c8d6e5", fontSize: "14px"}}>Courses</HashLink></ListItem>
+                <ListItem><HashLink to="#AboutUs" smooth style={{ textDecoration:"none", color:" #c8d6e5", fontSize: "14px"}}>About Us</HashLink></ListItem>
+                <ListItem><HashLink to="#Contactus" smooth style={{ textDecoration:"none", color:" #c8d6e5", fontSize: "14px"}}>Contact Us</HashLink></ListItem>
+                 <ListItem><Link to="/Gallery"  style={{ textDecoration:"none", color:" #c8d6e5", fontSize: "14px"}}>Gallery</Link></ListItem>
               </List>
           </Center>
           <Right>
