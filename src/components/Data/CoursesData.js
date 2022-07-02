@@ -243,10 +243,10 @@ const CoursesData =[
         image:"/Images/Card_Images/mobile app development.jpg",
         title:"Mobile App Development",
         selected:{
-            title:"web development in surat with 100% placements",
+            title:"Mobile App development in surat with 100% placements",
             img:"/Images/courses/Appdev.png",
             overview:{
-                heading1:"Why Choose Web Development?",
+                heading1:"Why Choose App Development?",
                 description1:"The web developer follows the designer’s idea, concepts and creates the code that is used to turn them into a unique website and bring them to open for all.Web developers involved in designing a website, write web scripts using PHP Language too. Additionally, PHP developers may help maintain and update a database used for a dynamic website.The website nowadays is essential for advertising and promoting products and brands. A good web site determines all about the industry and its product in a clear way.",
                 heading2:"What is the Career Growth in Web Design Course in Surat?",
             },
@@ -396,12 +396,12 @@ const CoursesData =[
     {
         id:6,
         image:"/Images/Card_Images/web design.jpg",
-        title:"web Design",
+        title:"Web Design",
         selected:{
-            title:"web development in surat with 100% placements",
+            title:"Web Design in surat with 100% placements",
             img:"/Images/courses/webdesign.png",
             overview:{
-                heading1:"Why Choose Web Development?",
+                heading1:"Why Choose Web Design?",
                 description1:"The web developer follows the designer’s idea, concepts and creates the code that is used to turn them into a unique website and bring them to open for all.Web developers involved in designing a website, write web scripts using PHP Language too. Additionally, PHP developers may help maintain and update a database used for a dynamic website.The website nowadays is essential for advertising and promoting products and brands. A good web site determines all about the industry and its product in a clear way.",
                 heading2:"What is the Career Growth in Web Design Course in Surat?",
             },

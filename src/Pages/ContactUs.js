@@ -1,24 +1,24 @@
 import React,{useEffect} from 'react'
 import styled  from 'styled-components'
-import { useMemo } from "react";
+// import { useMemo } from "react";
 import Aos from 'aos'
 import "aos/dist/aos.css"
 import ContactusForm from "../components/ContactusForm"
-// import {Map, GoogleApiWrapper} from "google-map-react"
-import { GoogleMap, useLoadScript,Marker  } from '@react-google-maps/api';
+
+// import { GoogleMap, useLoadScript,Marker  } from '@react-google-maps/api';
 
 
-const mapStyles = {        
-  height: "70vh",
-  width: "100%",
+// const mapStyles = {        
+//   height: "70vh",
+//   width: "100%",
  
-  '@media (maxWidth: 768px)': {
-    margin: ' 0rem 4rem',
-  },
-  '@media (maxWidth: 360px)': {
-    display: 'none',
-  },
-};
+//   '@media (maxWidth: 768px)': {
+//     margin: ' 0rem 4rem',
+//   },
+//   '@media (maxWidth: 360px)': {
+//     display: 'none',
+//   },
+// };
 
 // const defaultCenter = {
 //   lat: 21.17587385717746, lng: 72.87210795690892
@@ -29,34 +29,34 @@ const ContactUs = () => {
     Aos.init({duration:2000})
 },[])
 
-  const { isLoaded } = useLoadScript({
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP_API_KEY,
-  });
-  if (!isLoaded) return <div>Loading...</div>;
+  // const { isLoaded } = useLoadScript({
+  //   googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP_API_KEY,
+  // });
+  // if (!isLoaded) return <div>Loading...</div>;
   return (
     <Container id='Contactus'>
       <FormContainer data-aos="fade-right">
         <h1>Contact Us</h1>
         <ContactusForm/>
       </FormContainer>
-      <MapContainer data-aos="fade-left">
+      {/* <MapContainer data-aos="fade-left">
         <Map/>
-      </MapContainer>
+      </MapContainer> */}
     </Container>
 
   );
 }
 
 
-function Map() {
-  const center = useMemo(() => ({ lat:  21.17587385717746, lng:  72.87210795690892 }), []);
+// function Map() {
+//   const center = useMemo(() => ({ lat:  21.17587385717746, lng:  72.87210795690892 }), []);
 
-  return (
-    <GoogleMap zoom={10} center={center}  mapContainerStyle={mapStyles}>
-      <Marker title='Raj Empires' position={center} />
-    </GoogleMap>
-  );
-}
+//   return (
+//     <GoogleMap zoom={10} center={center}  mapContainerStyle={mapStyles}>
+//       <Marker title='Raj Empires' position={center} />
+//     </GoogleMap>
+//   );
+// }
 
 
 
@@ -107,34 +107,34 @@ const FormContainer= styled.div`
 }
 
 `
-const MapContainer= styled.div`
-  flex: 1;
-  width: 70%;
-  padding: 3rem;
-  @media (max-width: 1024px) {
-    width: 90%;
-  overflow-x: hidden;
+// const MapContainer= styled.div`
+//   flex: 1;
+//   width: 70%;
+//   padding: 3rem;
+//   @media (max-width: 1024px) {
+//     width: 90%;
+//   overflow-x: hidden;
     
-}
-@media (max-width: 768px) {
-  padding: 0rem 0rem;
-  margin-left: 2rem;
-  overflow: hidden;
+// }
+// @media (max-width: 768px) {
+//   padding: 0rem 0rem;
+//   margin-left: 2rem;
+//   overflow: hidden;
   
-}
-@media (max-width: 450px) {
-  padding: 0rem 0rem;
-  margin-left: 5rem;
-  width: 50%;
-  overflow: hidden;
-}
-@media (max-width: 368px) {
-  padding: 0rem 0rem;
-  margin-left: 5rem;
-  width: 50%;
-  overflow: hidden;
-}
-`
+// }
+// @media (max-width: 450px) {
+//   padding: 0rem 0rem;
+//   margin-left: 5rem;
+//   width: 50%;
+//   overflow: hidden;
+// }
+// @media (max-width: 368px) {
+//   padding: 0rem 0rem;
+//   margin-left: 5rem;
+//   width: 50%;
+//   overflow: hidden;
+// }
+// `
 
 
 export default ContactUs

@@ -44,7 +44,7 @@ const handleSubmit=(data, { resetForm })=>{
  
         axios({
             method: 'post',
-            url: 'http://localhost/code_sharp/Inquiry.php',
+            url: 'https://www.codesharp.co.in/codeSharp/BackEnd/Inquiry.php',
             data: formData,
             config: { headers: {'Content-Type': 'multipart/form-data' }}
         })

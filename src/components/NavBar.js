@@ -16,9 +16,11 @@ const NavBar = () => {
   return (
     <>
     <Nav>
+    <Link to="/" style={{ textDecoration:"none", color:"black", fontSize: "18px"}}>
       <Logo>
-          <LogoImg src='/Images/logo1.png'/>
+       <LogoImg src='/Images/logo1.png'/>
       </Logo>
+      </Link>
       <Hamburger onClick={() => setIsOpen(!isOpen)}>
         <span />
         <span />
@@ -26,10 +28,10 @@ const NavBar = () => {
       </Hamburger>
       <Menu isOpen={isOpen}>
         <Link to="/" style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Home</MenuLink></Link>
-        <HashLink to="#AboutUs" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>About Us</MenuLink></HashLink>
-        <HashLink to="#Courses" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Courses</MenuLink></HashLink>
+        <HashLink to="/#AboutUs" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>About Us</MenuLink></HashLink>
+        <HashLink to="/#Courses" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Courses</MenuLink></HashLink>
         <Link to="/Gallery"  style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Gallery</MenuLink></Link>
-        <HashLink to="#Contactus" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Contact Us</MenuLink></HashLink>
+        <HashLink to="/#Contactus" smooth style={{ textDecoration:"none", color:"black", fontSize: "18px"}}><MenuLink>Contact Us</MenuLink></HashLink>
       </Menu>
       <Right>
         <EnquiryBtn onClick={OpenModal}>Enquire Now</EnquiryBtn>
@@ -82,6 +84,7 @@ const Logo = styled.div`
   text-decoration: none;
   font-weight: 800;
   font-size: 1.7rem;
+  cursor: pointer;
   span {
     font-weight: 300;
     font-size: 1.3rem;

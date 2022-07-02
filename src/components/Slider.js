@@ -49,7 +49,6 @@ const Slider = () => {
         {
         SliderData.map((CurrEle)=>{
           return(
-            <>
             <SwiperSlide key={CurrEle.id}>
             <SwiperContainer>
               <SwiperContent>
@@ -61,10 +60,9 @@ const Slider = () => {
                 <SwpiperImage src={CurrEle.image} alt="Swiper Img1"/>
               </ImageContainer>
             </SwiperContainer>
-          </SwiperSlide>
             <div ref={navigationPrevRef} />
             <div ref={navigationNextRef} />
-          </>
+          </SwiperSlide>
           )
         })
       }

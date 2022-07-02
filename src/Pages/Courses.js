@@ -4,9 +4,9 @@ import CoursesData from "../components/Data/CoursesData"
 import styled from 'styled-components';
 import { RiArrowDropDownLine,RiArrowDropUpLine } from "react-icons/ri";
 import Footer from "../Pages/Footer"
-import HashNavBar from '../components/HashNavBar';
 import Modal from '../components/Modal';
 import ContactusForm from "../components/ContactusForm"
+import NavBar from '../components/NavBar';
 
 
 const Courses = () => {
@@ -36,8 +36,8 @@ const Courses = () => {
     {
         SelecteCourse.map((CurrELe)=>{
             return(
-                <>
-                <HashNavBar/>
+                <div key={CurrELe.id}>
+                <NavBar/>
                  <Container>
                     <ImageContainer>
                       <ImageCircle>
@@ -168,7 +168,7 @@ const Courses = () => {
                       </Form>
                     </InquiryFormContainer>
                   </DataContainer>
-                </>
+                </div>
             )
         })
     }
